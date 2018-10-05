@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="access_request" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Access Request</label>
+            <tab>general</tab>
+            <resource>Gssi_AccessRequest::access_config</resource>
+            <group id="module_enable_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" >
+                <label>Access Request</label>
+                <field id="module_enable_field" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <!-- canRestore render the "use system value" -->
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="email_options" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Email Options</label>
+                <field id="email_send_to" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Send Emails To</label>
+                    <validate>validate-email</validate>
+                </field>
+                <field id="email_sender" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Email Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                </field>
+                <field id="email_template" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Email Template</label>
+                    <comment>Email template chosen based on theme fallback when "Default" option is selected.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

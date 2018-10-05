@@ -1,0 +1,46 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Access Request"}} @-->
+<!--@vars {
+"var data.comment":"Comment",
+"var data.email":"Sender Email",
+"var data.name":"Sender Name",
+"var data.telephone":"Sender Telephone"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table class="message-details">
+    <tr>
+        <td><b>{{trans "Name"}}</b></td>
+        <td>{{var name}}</td>
+    </tr>
+    <tr>
+        <td><b>{{trans "Email"}}</b></td>
+        <td>{{var email}}</td>
+    </tr>
+    <tr>
+        <td><b>{{trans "TelePhone"}}</b></td>
+        <td>{{var telephone}}</td>
+    </tr>
+    <tr>
+        <td><b>{{trans "Company"}}</b></td>
+        <td>{{var company}}</td>
+    </tr>
+    <tr>
+        <td><b>{{trans "Head Office Address"}}</b></td>
+        <td>{{var head_office_address}}</td>
+    </tr>
+    <tr>
+        <td><b>{{trans "Company Size"}}</b></td>
+        <td>{{var company_size}}</td>
+    </tr>
+</table>
+<p><b>{{trans "Comment"}}</b></p>
+<p>{{var comment}}</p>
+
+{{template config_path="design/email/footer_template"}}

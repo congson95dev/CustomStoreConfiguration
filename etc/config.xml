@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <access_request>
+
+            <module_enable_group>
+                <module_enable_field>1</module_enable_field>
+            </module_enable_group>
+
+            <email_options>
+                <email_send_to>dev20102015@gmail.com</email_send_to>
+                <email_sender>custom2</email_sender>
+                <email_template>access_request</email_template>
+            </email_options>
+
+        </access_request>
+    </default>
+</config>
+<!-- this file is using for create DEFAULT VALUE to configuration store -->
+<!-- https://www.mageplaza.com/magento-2-module-development/create-system-xml-configuration-magento-2.html -->
